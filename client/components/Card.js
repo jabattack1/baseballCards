@@ -12,10 +12,11 @@ class Card extends React.Component{
 				<div className='grid-figure-wrap'>
 					<Link to={'/view/'+ post.code }>
 						<img src={post.display_src} alt={post.caption} className='grid-card' onMouseOver={this.props.change.bind(null, i)} onMouseOut={this.props.changeBack.bind(null, i)}/>
-						<CSSTransitionGroup transitionName='like' transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-							<span key={post.likes} className='likes-heart'>{post.likes}</span>
-						</CSSTransitionGroup>
 					</Link>
+
+					<CSSTransitionGroup transitionName='like' transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+						<span key={post.likes} className='likes-heart'>{post.likes}</span>
+					</CSSTransitionGroup>
 				</div>
 
 
@@ -32,5 +33,3 @@ class Card extends React.Component{
 }
 
 export default Card;
-
-<p>I <span style="font-size:500%;color:red;">&hearts;</span> nature!</p>
