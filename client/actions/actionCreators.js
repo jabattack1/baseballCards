@@ -20,6 +20,7 @@ export function changeBack(index) {
 	}
 }
 
+
 //add comment
 export function addComment(postId, author, comment){
 	console.log('dispatching add comment');

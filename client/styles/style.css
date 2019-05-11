@@ -85,6 +85,10 @@ body {
     margin-top:20px;
 }
 
+.likes:hover{
+	cursor:pointer;
+}
+
 .single-card{
   /*@extend .grid-figure*/
   max-width: 900px;
@@ -105,4 +109,38 @@ body {
   pointer-events: none;
 }
 
+
+.remove-comment{
+  background: none;
+  border: 0;
+  line-height: 1;
+  opacity: 0;
+  font-size:20px;
+}
+
+.comment:hover > p > .remove-comment{
+	color: red;
+	opacity: 1;
+	cursor:pointer;
+}
+
+
+.comment{
+  border-bottom: 1px solid lightgrey;
+  padding: 0.5rem 0;
+	font-size: 1.2rem;
+    margin: 0;
+    color: blue;
+    margin-right: 5px;
+}
+ 
+.comment-form > input {
+    width: 100%;
+    border: 0;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    resize: vertical;
+}
 

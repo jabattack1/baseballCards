@@ -2,8 +2,9 @@ import React from 'react';
 import {Link} from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Card extends React.Component{
+const Card = React.createClass({
 	render(){
+		// console.log(this.props);
 
 		const {post, i, comments} = this.props;
 
@@ -11,7 +12,7 @@ class Card extends React.Component{
 			<figure className='grid-figure'>
 				<div className='grid-figure-wrap'>
 					<h1 className='rank'>{post.rank}</h1>
-					<Link to={'/view/'+ post.code }>
+					<Link to={'/view/'+ post.code } onClick={this.hideP()}>
 						<img src={post.display_src} alt={post.caption} className='grid-card' onMouseOver={this.props.change.bind(null, i)} onMouseOut={this.props.changeBack.bind(null, i)}/>
 					</Link>
 
@@ -30,7 +31,13 @@ class Card extends React.Component{
 				</figcaptions>
 			</figure>
 		)
+	},
+
+	hideP(){
+		console.log('zone');
+		let object = document.getElementsByClassName('disclosure')
+		console.log(object);
 	}
-}
+})
 
 export default Card;
