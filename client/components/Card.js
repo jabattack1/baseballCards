@@ -10,6 +10,7 @@ class Card extends React.Component{
 		return(
 			<figure className='grid-figure'>
 				<div className='grid-figure-wrap'>
+					<h1 className='rank'>{post.rank}</h1>
 					<Link to={'/view/'+ post.code }>
 						<img src={post.display_src} alt={post.caption} className='grid-card' onMouseOver={this.props.change.bind(null, i)} onMouseOut={this.props.changeBack.bind(null, i)}/>
 					</Link>

@@ -9,6 +9,17 @@ body {
 	margin: 0 auto;
 	text-align: center;
     display: block;
+    text-decoration: none;
+    color:black;
+}
+
+.disclosure{
+	width:1200px;
+	margin: 0 auto;
+	text-align: center;
+    display: block;
+    font-size:20px;
+    word-wrap: break-word;
 }
 
 .cards-grid{
@@ -34,18 +45,25 @@ body {
 
 .grid-figure-wrap{
 	width: calc(100%);
-	background-color: black;
+	/*background-color: black;*/
 	/*display: table;*/
 }
 
 .grid-card{
   width: calc(100%);
+  margin-top:20px;
 /*  margin-left: -2rem;
   margin-top: -2rem;*/
   /*display: inline-flex;*/
   /*display: table-row;*/
 /*  width: 200px;
   height:320px;*/
+}
+
+.rank{
+	margin: 0 auto;
+	text-align: center;
+    display: block;	
 }
 
 .caption{
@@ -74,9 +92,6 @@ body {
   margin: 0 auto;
   display: flex;
 }
-
-
-
 
 .likes-heart{
   background: url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat;
