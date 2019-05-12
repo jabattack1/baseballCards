@@ -17,7 +17,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(7770, 'localhost', function(err) {
+app.listen(3000, 'localhost', function(err) {
   if (err) {
     console.log(err);
     return;
@@ -25,3 +25,7 @@ app.listen(7770, 'localhost', function(err) {
 
   console.log('Listening at http://localhost:7770');
 });
+
+
+// var port_number = server.listen(process.env.PORT || 3000);
+// app.listen(port_number);
