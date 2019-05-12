@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": ":) ",
   "scripts": {
-    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build": "npm run clean && npm run build:webpack",
-    "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
-    "clean": "rimraf dist",
-    "start": "node devServer.js",
-    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
+    "dev-server": "webpack-dev-server --open",
+    "start": "node server.js",
+    "build": "webpack -p",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +29,7 @@
     "eslint": "^2.9.0",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-react": "^5.0.1",
-    "express": "^4.13.4",
+    "express": "^4.16.4",
     "raven-js": "^2.3.0",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
