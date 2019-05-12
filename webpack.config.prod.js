@@ -36,12 +36,11 @@ module.exports = {
     // CSS
     {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader:'style!css!'
     }
     ]
   }
 };
-
 
 
 
