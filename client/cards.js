@@ -6,18 +6,17 @@ import css from './styles/style.css';
 
 import App from './components/App.js';
 import Single from './components/Single.js';
-import CardGrid from './components/CardsGrid.js';
+import CardsGrid from './components/CardsGrid.js';
 
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store, {history} from './store';
 
-
 const router = (
 	<Provider store={store}>
 		<Router history={history}>
 			<Route path='/' component={App}>
-				<IndexRoute component={CardGrid}></IndexRoute>
+				<IndexRoute component={CardsGrid}></IndexRoute>
 				<Route path='/view/:postId' component={Single}></Route>
 			</Route>
 		</Router>

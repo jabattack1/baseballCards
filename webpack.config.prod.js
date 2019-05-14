@@ -25,7 +25,7 @@ module.exports = {
       }
     })
   ],
-  module: {
+    module: {
     loaders: [
     // js
     {
@@ -34,16 +34,19 @@ module.exports = {
       include: path.join(__dirname, 'client')
     },
     // CSS
+    { 
+      test: /\.styl$/, 
+      include: path.join(__dirname, 'client'),
+      loader: 'style-loader!css-loader!stylus-loader'
+    },
     {
-      test: /\.css$/,
-      loader:'style!css!'
+      test: /src(\/|\\).*\.css$/,
+      loader: 'style!css'
+    },
+    {
+      test: /src(\/|\\).*\.scss$/,
+      loader: 'style!css!sass'
     }
     ]
   }
 };
-
-
-
-
-
-
