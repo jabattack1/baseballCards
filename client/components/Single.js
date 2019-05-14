@@ -5,6 +5,7 @@ import Comments from './Comments.js'
 
 class Single extends React.Component{
 	render(){
+		console.log(this);
 		//index of the post
 		// const [postId] = this.props.params;
 		const i = this.props.posts.findIndex((post) => post.code === this.props.params.postId);

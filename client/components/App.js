@@ -1,4 +1,3 @@
-// import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/actionCreators.js';
@@ -17,5 +16,12 @@ function mapDispatchToProps(dispatch){
 }
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);
+
+// class test extends React.Component{
+// 	render(){
+// 	console.log('poetic');
+// 		console.log(this.props.posts);
+// 	}
+// }
 
 export default App;
